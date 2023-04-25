@@ -8,6 +8,7 @@ import {BlogComponent} from "./components/blog/blog.component";
 import {ForumsComponent} from "./components/forums/forums.component";
 import {ForumTopicsComponent} from "./components/forum-topics/forum-topics.component";
 import {ForumSingleComponent} from "./components/forum-single/forum-single.component";
+import {CreateBlogComponent} from "./components/create-blog/create-blog.component";
 
 const routes: Routes = [
   {
@@ -27,6 +28,9 @@ const routes: Routes = [
   },
   {
     path: 'blog', component: BlogComponent
+  },
+  {
+    path: 'createblog', component: CreateBlogComponent
   },
   {
     path: 'forums', component: ForumsComponent

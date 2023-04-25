@@ -631,7 +631,7 @@
 			var canvas = $('#kbDoc-chart');
 			canvas.attr('height', 125);
 			// chart.canvas.parentNode.style.height = '128px';
-			// chart.canvas.parentNode.style.width = '128px';	
+			// chart.canvas.parentNode.style.width = '128px';
 
 			var chart = new Chart(canvas, {
 				type: 'polarArea',
@@ -687,7 +687,7 @@
 
 		});
 
-		
+
 		$('.short-by a').click( function() {
 			$(this).toggleClass('active-short').siblings().removeClass('active-short');
 		});
@@ -812,6 +812,30 @@
 		} else {
 			$('.ios').hide();
 		}
-	})
+	});
+
+
+
+  if (tinyMCE.activeEditor != null){
+    tinymce.remove("textarea#default");
+  }else {
+    tinymce.init({
+      selector: 'textarea#default',
+      height: 500,
+      width: 700,
+      plugins: [
+        'advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview',
+        'anchor', 'searchreplace', 'visualblocks', 'code', 'fullscreen',
+        'insertdatetime', 'media', 'table', 'help', 'wordcount'
+      ],
+      toolbar: 'undo redo | blocks | ' +
+        'bold italic backcolor | alignleft aligncenter ' +
+        'alignright alignjustify | bullist numlist outdent indent | ' +
+        'removeformat | help',
+      content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:16px }'
+
+    });
+  }
 
 })(jQuery);
+
