@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./create-blog.component.css']
 })
 export class CreateBlogComponent {
-
+  url="assets/img/smile.png"
+  selectFile(event: any){
+    if(event.target.files){
+      var reader = new FileReader()
+      reader.readAsDataURL(event.target.files[0])
+      reader.onload = (event: any) =>{
+        this.url = event.target.result
+      }
+    }
+  }
 }

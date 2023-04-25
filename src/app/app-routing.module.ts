@@ -9,6 +9,8 @@ import {ForumsComponent} from "./components/forums/forums.component";
 import {ForumTopicsComponent} from "./components/forum-topics/forum-topics.component";
 import {ForumSingleComponent} from "./components/forum-single/forum-single.component";
 import {CreateBlogComponent} from "./components/create-blog/create-blog.component";
+import {ForgotPasswordComponent} from "./components/forgot-password/forgot-password.component";
+import {ChangePasswordComponent} from "./components/change-password/change-password.component";
 
 const routes: Routes = [
   {
@@ -25,6 +27,12 @@ const routes: Routes = [
   },
   {
     path: 'signup', component: SignupComponent
+  },
+  {
+    path: 'forgotpassword', component:ForgotPasswordComponent
+  },
+  {
+    path: 'changepassword', component:ChangePasswordComponent
   },
   {
     path: 'blog', component: BlogComponent
